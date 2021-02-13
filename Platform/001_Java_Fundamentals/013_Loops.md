@@ -325,36 +325,129 @@ Work on the puzzles below. Make your code as clean as possible. The class name s
 
 *   Create an array with the following values: 3,5,1,2,7,9,8,13,25,32. Print the sum of all numbers in the array. Also have the function return an array that only includes numbers that are greater than 10 (e.g. when you pass the array above, it should return an array with the values of 13,25,32)
 
-```java
-public ArrayList printTenUp(int[] arr){
-    ArrayList<Object> newArr = new ArrayList<Object>();
-    int sum = 0;
-    for (int item : arr) {
-        sum = sum + item;
-        if(item >= 10){
-            newArr.add(item);
+    ```java
+        public ArrayList printTenUp(int[] arr){
+            ArrayList<Object> newArr = new ArrayList<Object>();
+            int sum = 0;
+            for (int item : arr) {
+                sum = sum + item;
+                if(item >= 10){
+                    newArr.add(item);
+                }
+            }    
+            System.out.println("Print Sum: "+sum);
+            return newArr;
         }
-    }    
-    System.out.println("Print Sum: "+sum);
-    return newArr;
-}
-```
+    ```
 
 *   Create an array with the following values: Nancy, Jinichi, Fujibayashi, Momochi, Ishikawa. Shuffle the array and print the name of each person. Have the method also return an array with names that are longer than 5 characters.
+    ```java
+    public String[] shuffleArray(String[] arr){
+            ArrayList<Object> newArr = new ArrayList<Object>();
 
+            Random r = new Random();
+
+            for (int i = 0; i < arr.length; i++) {
+                String item = arr[r.nextInt(arr.length)];
+                System.out.println(item);
+                if(item.length() > 5){
+                    newArr.add(item);   
+                }            
+            }
+
+            String [] returnArr = new String [newArr.size()];
+
+            for (int i = 0; i < newArr.size(); i++) {
+                returnArr[i] = newArr.get(i).toString(); 
+            }
+            return returnArr;
+        }
+    ```
 *   Create an array that contains all 26 letters of the alphabet (this array must have 26 values). Shuffle the array and, after shuffling, display the last letter from the array. Have it also display the first letter of the array. If the first letter in the array is a vowel, have it display a message.
 
     *   To shuffle a collection, you can use the `shuffle` method of the `Collections` class. [Collections Class documentation](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html)
+    ```java
+    public String alphabetShuffle() {
+        ArrayList<Object>  all26 = new ArrayList<Object>(); 
+        char[] vowels = {'A', 'E', 'I', 'O', 'U'};
+        char c;
+        int i = 0;
+        for(c = 'A'; c <= 'Z'; ++c, i++ ){
+            all26.add(c);          
+        }
+        
+        Collections.shuffle(all26);
+        char lastLetter = all26.get(25).toString().charAt(0);
+        char firstLetter = all26.get(0).toString().charAt(0);
+        System.out.println(firstLetter);
+        System.out.println(lastLetter);
+
+        String message =  "";
+        for (char item : vowels) {
+           if(firstLetter == item){
+               message = "First Letter is a Vowel";
+           }
+        }
+        return message;
+    }
+    ```
 *   Generate and return an array with 10 random numbers between 55-100.
 
     *   To get a random integer, you can use the `nextInt` method of the `Random` class. [Random Class documentation](https://docs.oracle.com/javase/8/docs/api/java/util/Random.html)
+    ```java
+    public int[] randomNumbers55_100(){
+        Random r = new Random();
+        int[] arr = new int[10];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = r.nextInt(100-55) + 55;
+        }
+        return arr;
+    }
+    ```
 *   Generate and return an array with 10 random numbers between 55-100 and have it be sorted (showing the smallest number in the beginning). Display all the numbers in the array. Next, display the minimum value in the array as well as the maximum value.
 
     *   To sort a collection, you can use the `sort` method of the `Collections` class.
+    ```java
+    public ArrayList<Integer>  randomNumbers55_100_sorted(){
+        ArrayList<Integer> arr = new ArrayList<Integer>();
+        Random r = new Random();
+        for (int i = 0; i < 10; i++) {
+            int item = r.nextInt(100-55) + 55;
+            arr.add(item);
+        }
+        Collections.sort(arr);
+        return arr;
+    }
+    ```
 *   Create a random string that is 5 characters long.
+    ```java
+    public String getFiveString() {
+        int leftLimit = 97; // letter 'a'
+        int rightLimit = 122; // letter 'z'
+        int targetStringLength = 5;
+        Random random = new Random();
+    
+        String generatedString = random.ints(leftLimit, rightLimit + 1)
+          .limit(targetStringLength)
+          .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
+          .toString();
+    
+        return generatedString;
+
+    }
+    ```
 
 *   Generate an array with 10 random strings that are each 5 characters long
+    ```java
+    public ArrayList<Object> getFiveStringArray(){
+        ArrayList<Object>  arr = new ArrayList<Object>();
 
+        for (int i = 0; i < 10; i++) {
+            arr.add(this.getFiveString());            
+        }
+        return arr;
+    }
+    ```
 
 #
 
