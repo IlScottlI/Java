@@ -7,7 +7,7 @@ public class Human {
 	private String name = "";
 
 	public Human(String name) {
-	        this.setName(name);
+		this.setName(name);
 	}
 
 	public int getStrength() {
@@ -51,9 +51,10 @@ public class Human {
 	}
 
 	public void attack(Human obj) {
-		System.out.println(obj.getName() + " was attacked by " + this.name + " strength of " + this.getStrength());
+		System.out
+				.println(obj.getName() + " was attacked by " + this.name + " whith strength of " + this.getStrength());
 		obj.setHealth(obj.getHealth() - this.getStrength());
-		System.out.println(obj.getName() + "'s health is " + obj.getHealth() );
+		System.out.println();
 	}
 
 }

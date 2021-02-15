@@ -8,7 +8,7 @@
 
 #
 
-#   **Object Master: Part Two
+#   Object Master: Part Two
 The club liked your work so much that they asked you to build out their character choices a bit more. They want you to add Ninja, Wizard, and Samurai classes, but they also want any modifications they make to the Human class to extend to these.
 
 In addition to that, each class will have some unique features:
