@@ -2,7 +2,7 @@
     <tr>
         <td><a href="./014_Maps.md">Back</a></td>
         <td><a href="../Index.md">Index</a></td>
-        <td><a href="">Next</a></td>
+        <td><a href="./../002_Java_OOP/001_OOP.md">Next</a></td>
     </tr>
 </table>
 
@@ -93,6 +93,6 @@ After you have set up this code, try running it. It should throw a `ClassCastExc
     <tr>
         <td><a href="./014_Maps.md">Back</a></td>
         <td><a href="../Index.md">Index</a></td>
-        <td><a href="">Next</a></td>
+        <td><a href="./../002_Java_OOP/001_OOP.md">Next</a></td>
     </tr>
 </table>
