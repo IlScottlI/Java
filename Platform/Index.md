@@ -72,7 +72,7 @@
 * ### [Calculator](./005_Java_on_the_web/018_Calculator.md)
 # Spring
 ## Spring Fundamentals
-* ### [Overview](./006_Spring/005_Login_Registration/001_Overview.md)
+* ### [Overview](./006_Spring/001_Spring_Fundamentals/001_Overview.md)
 * ### [Mac Installation](./006_Spring/001_Spring_Fundamentals/002_Mac_Install.md)
 * ### [Windows Installation](./006_Spring/001_Spring_Fundamentals/003_Windows_Install.md)
 * ### [Start a New Spring Boot Project](./006_Spring/001_Spring_Fundamentals/004_New_Spring_Boot.md)
