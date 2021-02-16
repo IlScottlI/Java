@@ -1,10 +1,10 @@
 
 public class Samurai extends Human {
-	 int counter = 0; 
+	 public static int counter = 0; 
 	 public Samurai(String name) {
 	        super(name);
 	        super.setHealth(200);
-	        counter++;
+	        counter ++;
 	    }
 	 	
 	 public void runAway() {
