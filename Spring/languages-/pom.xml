@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.codingdojo.johnson.se</groupId>
-	<artifactId>mysqldbapp</artifactId>
+	<artifactId>languages</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>mysqldbapp</name>
-	<description>MySQL DB App</description>
+	<name>languages</name>
+	<description>Languages</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
