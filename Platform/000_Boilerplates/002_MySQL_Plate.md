@@ -5,7 +5,6 @@
         <td><a href="">Next</a></td>
     </tr>
 </table>
-[]()
 
 #   MySQL Spring Boot Boilerplate
 
