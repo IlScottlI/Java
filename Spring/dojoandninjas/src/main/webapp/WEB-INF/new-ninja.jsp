@@ -36,7 +36,9 @@
                             </div>
                             <div class="col-xl-3">
                                 <form:errors path="dojo" class="text-danger" />
-                                <form:select path="dojo" class="form-control">
+                                <form:select path="dojo" class="form-control" name="dojoId">
+                                    <form:option value="0" label="-Select Dojo-">
+                                    </form:option>
                                     <form:options items="${dojos}" itemValue="id" itemLabel="name" />
                                 </form:select>
                             </div>

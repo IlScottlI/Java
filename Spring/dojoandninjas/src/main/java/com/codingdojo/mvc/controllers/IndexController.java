@@ -19,11 +19,11 @@ import com.codingdojo.mvc.services.NinjaService;
 
 @Controller
 public class IndexController {
-	
+
     private final DojoService dojoService;
     private final NinjaService ninjaService;
 
-    public IndexController( DojoService dojoService, NinjaService ninjaService) {
+    public IndexController(DojoService dojoService, NinjaService ninjaService) {
         this.dojoService = dojoService;
         this.ninjaService = ninjaService;
     }
@@ -36,12 +36,12 @@ public class IndexController {
         model.addAttribute("ninjas", ninjas);
         return "all-dojos.jsp";
     }
-    
+
     @RequestMapping("/dojos/new")
-    public String newDojo(@ModelAttribute("dojo") Dojo dojo,Model model) {
+    public String newDojo(@ModelAttribute("dojo") Dojo dojo, Model model) {
         return "new-dojo.jsp";
     }
-    
+
     @RequestMapping(value = "/dojos/new", method = RequestMethod.POST)
     public String createDojo(@Valid @ModelAttribute("dojo") Dojo dojo, BindingResult result) {
         if (result.hasErrors()) {
@@ -51,32 +51,40 @@ public class IndexController {
             return "redirect:/";
         }
     }
-    
+
     @RequestMapping("/dojos/{id}")
     public String viewDojo(@PathVariable("id") Long id, Model model) {
         Dojo dojo = dojoService.findDojo(id);
         model.addAttribute("dojo", dojo);
         return "view-dojos.jsp";
     }
-    
+
     @RequestMapping("/ninjas/new")
-    public String newNinja(@ModelAttribute("ninja") Ninja ninja,Model model) {
-    	List<Dojo> dojos = dojoService.allDojos();
+    public String newNinja(@ModelAttribute("ninja") Ninja ninja, Model model) {
+        List<Dojo> dojos = dojoService.allDojos();
         model.addAttribute("dojos", dojos);
         return "new-ninja.jsp";
     }
-    
+
     @RequestMapping(value = "/ninjas/new", method = RequestMethod.POST)
     public String createNinja(@Valid @ModelAttribute("ninja") Ninja ninja, BindingResult result, Model model) {
+
+        if (ninja.getDojo() == null) {
+            List<Dojo> dojos = dojoService.allDojos();
+            model.addAttribute("dojos", dojos);
+            return "new-ninja.jsp";
+        } else {
+
+        }
         if (result.hasErrors()) {
-        	List<Dojo> dojos = dojoService.allDojos();
+            List<Dojo> dojos = dojoService.allDojos();
             model.addAttribute("dojos", dojos);
             return "new-ninja.jsp";
         } else {
             ninjaService.createNinja(ninja);
             return "redirect:/";
         }
+
     }
-    
-    
+
 }

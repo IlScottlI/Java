@@ -21,10 +21,9 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 @Controller
 public class HomeController {
-	
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	
-	
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+
     private final PersonService personService;
     private final LicenseService licenseService;
 
@@ -35,7 +34,7 @@ public class HomeController {
 
     @RequestMapping("/")
     public String index(Model model) {
-    	List<License> licenses = licenseService.allLicenses();
+        List<License> licenses = licenseService.allLicenses();
         List<Person> persons = personService.allPersons();
         model.addAttribute("persons", persons);
         model.addAttribute("licenses", licenses);
