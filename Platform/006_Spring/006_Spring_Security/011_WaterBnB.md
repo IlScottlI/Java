@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./010_Admin_Dashboard.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./../007_Spring_Extras/001_Overview.md">Next</a></td>
     </tr>
 </table>
@@ -29,7 +29,7 @@ Features
 <table width="100%">
     <tr>
         <td><a href="./010_Admin_Dashboard.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./../007_Spring_Extras/001_Overview.md">Next</a></td>
     </tr>
 </table>

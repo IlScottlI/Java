@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./002_Overview.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./004_WebSecurity.md">Next</a></td>
     </tr>
 </table>
@@ -194,7 +194,7 @@ In the next lesson, we will learn how to configure our application with Spring S
 <table width="100%">
     <tr>
         <td><a href="./002_Overview.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./004_WebSecurity.md">Next</a></td>
     </tr>
 </table>

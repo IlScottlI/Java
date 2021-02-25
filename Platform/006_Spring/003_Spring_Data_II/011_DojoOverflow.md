@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./010_Full_MVC.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./../004_Advance_Queries/001_Advance.md">Next</a></td>
     </tr>
 </table>
@@ -40,7 +40,7 @@ In this tab, you will be creating a StackOverflow / Quora clone. Users will be a
 <table width="100%">
     <tr>
         <td><a href="./010_Full_MVC.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./../004_Advance_Queries/001_Advance.md">Next</a></td>
     </tr>
 </table>

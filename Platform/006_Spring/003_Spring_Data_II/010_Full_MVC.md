@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./009_Student_Roster_III.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./011_DojoOverflow.md">Next</a></td>
     </tr>
 </table>
@@ -33,7 +33,7 @@ The View template is reponsible for rendering what the client sees by using the 
 <table width="100%">
     <tr>
         <td><a href="./009_Student_Roster_III.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./011_DojoOverflow.md">Next</a></td>
     </tr>
 </table>

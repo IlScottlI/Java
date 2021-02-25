@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./001_Overview.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./003_Domain_Modles.md">Next</a></td>
     </tr>
 </table>
@@ -103,7 +103,7 @@ The jbcrypt dependency is the Java BCrypt implementation. This is how your pom.x
 <table width="100%">
     <tr>
         <td><a href="./001_Overview.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./003_Domain_Modles.md">Next</a></td>
     </tr>
 </table>

@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./007_Projects.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./../006_Spring_Security/001_Auth.md">Next</a></td>
     </tr>
 </table>
@@ -34,7 +34,7 @@ Create a Spring applications for Events
 <table width="100%">
     <tr>
         <td><a href="./007_Projects.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./../006_Spring_Security/001_Auth.md">Next</a></td>
     </tr>
 </table>

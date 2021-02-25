@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./009_Authorization.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./011_WaterBnB.md">Next</a></td>
     </tr>
 </table>
@@ -33,7 +33,7 @@ Your site was getting out of control, and you needed to allow an admin to modera
 <table width="100%">
     <tr>
         <td><a href="./009_Authorization.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./011_WaterBnB.md">Next</a></td>
     </tr>
 </table>

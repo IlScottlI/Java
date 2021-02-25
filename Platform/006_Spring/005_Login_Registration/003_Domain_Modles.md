@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./002_Setup.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./004_Service_BCrypt.md">Next</a></td>
     </tr>
 </table>
@@ -75,7 +75,7 @@ public interface UserRepository extends CrudRepository<User, Long> {
 <table width="100%">
     <tr>
         <td><a href="./002_Setup.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./004_Service_BCrypt.md">Next</a></td>
     </tr>
 </table>

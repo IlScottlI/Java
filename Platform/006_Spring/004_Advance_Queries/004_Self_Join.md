@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./003_Queries_Joins.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./005_Employee_Managers.md">Next</a></td>
     </tr>
 </table>
@@ -90,7 +90,7 @@ public void friends() {
 <table width="100%">
     <tr>
         <td><a href="./003_Queries_Joins.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./005_Employee_Managers.md">Next</a></td>
     </tr>
 </table>

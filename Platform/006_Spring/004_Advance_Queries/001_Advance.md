@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./../003_Spring_Data_II/011_DojoOverflow.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./002_Joins.md">Next</a></td>
     </tr>
 </table>
@@ -106,7 +106,7 @@ Object dojoName = dojo[1];
 <table width="100%">
     <tr>
         <td><a href="./../003_Spring_Data_II/011_DojoOverflow.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./002_Joins.md">Next</a></td>
     </tr>
 </table>

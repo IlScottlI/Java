@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./../004_Advance_Queries/006_Pagination.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./002_Setup.md">Next</a></td>
     </tr>
 </table>
@@ -23,7 +23,7 @@ The belt exams will not require you to use Spring Security.
 <table width="100%">
     <tr>
         <td><a href="./../004_Advance_Queries/006_Pagination.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./002_Setup.md">Next</a></td>
     </tr>
 </table>

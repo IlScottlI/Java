@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./004_Service_BCrypt.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./006_Validations.md">Next</a></td>
     </tr>
 </table>
@@ -149,7 +149,7 @@ Here is the answer for this assignment in video format. Please __DO NOT__ watch 
 <table width="100%">
     <tr>
         <td><a href="./004_Service_BCrypt.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./006_Validations.md">Next</a></td>
     </tr>
 </table>

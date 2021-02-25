@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./001_Advance.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./003_Queries_Joins.md">Next</a></td>
     </tr>
 </table>
@@ -80,7 +80,7 @@ This JSP code will output this:
 <table width="100%">
     <tr>
         <td><a href="./001_Advance.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./003_Queries_Joins.md">Next</a></td>
     </tr>
 </table>

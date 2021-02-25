@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./008_Products.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./010_Full_MVC.md">Next</a></td>
     </tr>
 </table>
@@ -46,7 +46,7 @@ Creating the web view for this assignment will be optional (only if you are behi
 <table width="100%">
     <tr>
         <td><a href="./008_Products.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./010_Full_MVC.md">Next</a></td>
     </tr>
 </table>

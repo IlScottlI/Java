@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./003_Student_Roster_1.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./005_Dojos_and_Ninjas.md">Next</a></td>
     </tr>
 </table>
@@ -13,7 +13,7 @@ In this tab, we will learn how to create One-to-Many relationships
 ## __1:n__
 We are going to create a 1:n relationship between a dojo and many ninjas
 
-<img src="./../../000_img/onetoone%20(1).png">
+<img src="./../../000_img/onetomany%20(1).png">
 
 ### __models/Dojo.java__
 ```java
@@ -85,7 +85,7 @@ public class Ninja {
 <table width="100%">
     <tr>
         <td><a href="./003_Student_Roster_1.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./005_Dojos_and_Ninjas.md">Next</a></td>
     </tr>
 </table>

@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="">Next</a></td>
     </tr>
 </table>
@@ -135,7 +135,7 @@ Make sure to give your application a hard reset to see the validations working.
 <table width="100%">
     <tr>
         <td><a href="">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="">Next</a></td>
     </tr>
 </table>

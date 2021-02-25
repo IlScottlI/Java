@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./007_Testing_Model.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./../../007_Java_Spring_Deployment/001_AWS_EC2.md">Next</a></td>
     </tr>
 </table>
@@ -29,7 +29,7 @@ This test will pass, because we tested to see that the violations `Set` would no
 <table width="100%">
     <tr>
         <td><a href="./007_Testing_Model.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./../../007_Java_Spring_Deployment/001_AWS_EC2.md">Next</a></td>
     </tr>
 </table>

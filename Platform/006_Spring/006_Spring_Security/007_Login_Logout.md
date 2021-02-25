@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./006_User_Details_Service.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./008_Validations.md">Next</a></td>
     </tr>
 </table>
@@ -185,7 +185,7 @@ Now, your application should work like the following:
 <table width="100%">
     <tr>
         <td><a href="./006_User_Details_Service.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./008_Validations.md">Next</a></td>
     </tr>
 </table>

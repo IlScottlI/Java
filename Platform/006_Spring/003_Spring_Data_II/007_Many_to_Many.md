@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./006_Student_Roster_II.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./008_Products.md">Next</a></td>
     </tr>
 </table>
@@ -192,7 +192,7 @@ Setting up your models like the above, will automatically create the joining tab
 <table width="100%">
     <tr>
         <td><a href="./006_Student_Roster_II.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./008_Products.md">Next</a></td>
     </tr>
 </table>

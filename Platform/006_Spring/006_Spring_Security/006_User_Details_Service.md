@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./005_BCrypt.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./007_Login_Logout.md">Next</a></td>
     </tr>
 </table>
@@ -116,7 +116,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 <table width="100%">
     <tr>
         <td><a href="./005_BCrypt.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./007_Login_Logout.md">Next</a></td>
     </tr>
 </table>

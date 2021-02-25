@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./006_JUnit_Spring.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./008_Model_Test.md">Next</a></td>
     </tr>
 </table>
@@ -119,7 +119,7 @@ public class BookModelTest {
 <table width="100%">
     <tr>
         <td><a href="./006_JUnit_Spring.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./008_Model_Test.md">Next</a></td>
     </tr>
 </table>

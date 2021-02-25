@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./005_Employee_Managers.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./../005_Login_Registration/001_Overview.md">Next</a></td>
     </tr>
 </table>
@@ -115,7 +115,7 @@ In this assignment, you will build upon the JOINS lessons. You will be creating 
 <table width="100%">
     <tr>
         <td><a href="./005_Employee_Managers.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./../005_Login_Registration/001_Overview.md">Next</a></td>
     </tr>
 </table>

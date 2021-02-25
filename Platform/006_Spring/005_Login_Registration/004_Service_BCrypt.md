@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./003_Domain_Modles.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./005_Controllers.md">Next</a></td>
     </tr>
 </table>
@@ -76,7 +76,7 @@ That's it! Super simple. Next, we will be implementing the controller and the vi
 <table width="100%">
     <tr>
         <td><a href="./003_Domain_Modles.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./005_Controllers.md">Next</a></td>
     </tr>
 </table>

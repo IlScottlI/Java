@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./004_One_to_Many.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./006_Student_Roster_II.md">Next</a></td>
     </tr>
 </table>
@@ -41,7 +41,7 @@ First download this .war file: [license-0.0.2-SNAPSHOT.war](https://github.com/i
 <table width="100%">
     <tr>
         <td><a href="./004_One_to_Many.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./006_Student_Roster_II.md">Next</a></td>
     </tr>
 </table>

@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./002_Joins.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./004_Self_Join.md">Next</a></td>
     </tr>
 </table>
@@ -65,7 +65,7 @@ DOUBLE	        |       double
 <table width="100%">
     <tr>
         <td><a href="./002_Joins.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./004_Self_Join.md">Next</a></td>
     </tr>
 </table>

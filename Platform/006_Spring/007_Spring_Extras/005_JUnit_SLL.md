@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./004_Assertions.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./006_JUnit_Spring.md">Next</a></td>
     </tr>
 </table>
@@ -55,7 +55,7 @@ public class TestSLL {
 <table width="100%">
     <tr>
         <td><a href="./004_Assertions.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./006_JUnit_Spring.md">Next</a></td>
     </tr>
 </table>

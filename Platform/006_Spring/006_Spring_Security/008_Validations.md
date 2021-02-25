@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./007_Login_Logout.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./009_Authorization.md">Next</a></td>
     </tr>
 </table>
@@ -169,7 +169,7 @@ If you revisit your browser, the error messages should still look the same!In th
 <table width="100%">
     <tr>
         <td><a href="./007_Login_Logout.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./009_Authorization.md">Next</a></td>
     </tr>
 </table>

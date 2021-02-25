@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./003_Testing.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./005_JUnit_SLL.md">Next</a></td>
     </tr>
 </table>
@@ -66,7 +66,7 @@ Add the following test into the FizzBuzzTest class and rerun the JUnit test.
 <table width="100%">
     <tr>
         <td><a href="./003_Testing.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./005_JUnit_SLL.md">Next</a></td>
     </tr>
 </table>

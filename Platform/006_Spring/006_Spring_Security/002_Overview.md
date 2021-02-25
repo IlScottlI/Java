@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./001_Auth.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./003_Data_Models.md">Next</a></td>
     </tr>
 </table>
@@ -84,7 +84,7 @@ You should be familiar with all of these except for the `spring-boot-starter-sec
 <table width="100%">
     <tr>
         <td><a href="./001_Auth.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./003_Data_Models.md">Next</a></td>
     </tr>
 </table>

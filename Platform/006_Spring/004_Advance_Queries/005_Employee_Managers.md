@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./004_Self_Join.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./006_Pagination.md">Next</a></td>
     </tr>
 </table>
@@ -30,7 +30,7 @@ In this assignment, you will create the domain models for a system to track empl
 <table width="100%">
     <tr>
         <td><a href="./004_Self_Join.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./006_Pagination.md">Next</a></td>
     </tr>
 </table>

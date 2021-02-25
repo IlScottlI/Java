@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./../005_Login_Registration/008_Events_Belt_Reviewer.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./002_Overview.md">Next</a></td>
     </tr>
 </table>
@@ -25,7 +25,7 @@ In this chapter, we are going to learn how to implement Authentication and Autho
 <table width="100%">
     <tr>
         <td><a href="./../005_Login_Registration/008_Events_Belt_Reviewer.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./002_Overview.md">Next</a></td>
     </tr>
 </table>

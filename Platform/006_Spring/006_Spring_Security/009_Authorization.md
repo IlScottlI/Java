@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./008_Validations.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./010_Admin_Dashboard.md">Next</a></td>
     </tr>
 </table>
@@ -112,7 +112,7 @@ Now, when you register a user, we will be adding `ROLE_ADMIN`. Once you log in w
 <table width="100%">
     <tr>
         <td><a href="./008_Validations.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./010_Admin_Dashboard.md">Next</a></td>
     </tr>
 </table>

@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./006_Validations.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./008_Events_Belt_Reviewer.md">Next</a></td>
     </tr>
 </table>
@@ -28,7 +28,7 @@ Here is our project guideline: [Project Guideline](https://s3.amazonaws.com/Gene
 <table width="100%">
     <tr>
         <td><a href="./006_Validations.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./008_Events_Belt_Reviewer.md">Next</a></td>
     </tr>
 </table>

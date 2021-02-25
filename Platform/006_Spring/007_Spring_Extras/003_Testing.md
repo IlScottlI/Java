@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./002_JUnit.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./004_Assertions.md">Next</a></td>
     </tr>
 </table>
@@ -56,7 +56,7 @@ Select the JUnit tab, and you should see the following result:
 <table width="100%">
     <tr>
         <td><a href="./002_JUnit.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./004_Assertions.md">Next</a></td>
     </tr>
 </table>

@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./003_Data_Models.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./005_BCrypt.md">Next</a></td>
     </tr>
 </table>
@@ -179,7 +179,7 @@ __localhost:8080/someRoute__
 <table width="100%">
     <tr>
         <td><a href="./003_Data_Models.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./005_BCrypt.md">Next</a></td>
     </tr>
 </table>

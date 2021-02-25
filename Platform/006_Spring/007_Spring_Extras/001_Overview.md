@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./../006_Spring_Security/011_WaterBnB.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./002_JUnit.md">Next</a></td>
     </tr>
 </table>
@@ -37,7 +37,7 @@ With that said, TDD is a hard skill to master. The goal of this section is to in
 <table width="100%">
     <tr>
         <td><a href="./../006_Spring_Security/011_WaterBnB.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./002_JUnit.md">Next</a></td>
     </tr>
 </table>

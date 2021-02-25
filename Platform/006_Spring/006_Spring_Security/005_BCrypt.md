@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./004_WebSecurity.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../../Index.md">Index</a></td>
         <td><a href="./006_User_Details_Service.md">Next</a></td>
     </tr>
 </table>
@@ -155,7 +155,7 @@ Navigate to `localhost:8080/registration` and register a user. Don't worry about
 <table width="100%">
     <tr>
         <td><a href="./004_WebSecurity.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./006_User_Details_Service.md">Next</a></td>
     </tr>
 </table>

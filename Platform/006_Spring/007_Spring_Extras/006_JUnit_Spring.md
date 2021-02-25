@@ -1,7 +1,7 @@
 <table width="100%">
     <tr>
         <td><a href="./005_JUnit_SLL.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./007_Testing_Model.md">Next</a></td>
     </tr>
 </table>
@@ -59,7 +59,7 @@ Test the app and you should get the following results.
 <table width="100%">
     <tr>
         <td><a href="./005_JUnit_SLL.md">Back</a></td>
-        <td><a href="../Index.md">Index</a></td>
+        <td><a href="../../Index.md">Index</a></td>
         <td><a href="./007_Testing_Model.md">Next</a></td>
     </tr>
 </table>
