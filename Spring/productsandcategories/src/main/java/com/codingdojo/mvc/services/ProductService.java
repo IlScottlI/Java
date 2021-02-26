@@ -24,8 +24,8 @@ public class ProductService {
 	        return productRepository.findAll();
 	    }
 	    
-	    public Product createItem(Product ninja) {
-	        return productRepository.save(ninja);
+	    public Product createItem(Product item) {
+	        return productRepository.save(item);
 	    }
 
 	    public Product findItem(Long id) {
@@ -36,7 +36,6 @@ public class ProductService {
 	        	return null;
 	        }
 	    }   
-
 		public void deleteItem(Long id) {
 			productRepository.deleteById(id);		
 		}

@@ -11,5 +11,5 @@ import com.codingdojo.mvc.models.Question;
 @Repository
 public interface QuestionRepository extends CrudRepository<Question,Long>{
 	List<Question> findAll();
-	List<Question> findAll(Sort sortOrder);
+	 List<Question> findAll(Sort sortOrder);
 }

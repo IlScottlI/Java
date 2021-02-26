@@ -1,7 +1,5 @@
 package com.codingdojo.mvc.services;
 
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
@@ -27,6 +25,11 @@ public class QuestionService {
 	    public Question createItem(Question item) {
 	        return questionRepository.save(item);
 	    }
+	    
+	    public Question updateItem(Question item) {
+	        return questionRepository.save(item);
+	    }
+
 
 	    public Question findItem(Long id) {
 	        Optional<Question> optionalItem = questionRepository.findById(id);
@@ -45,14 +48,4 @@ public class QuestionService {
 			return questionRepository.findAll(sortOrder);
 		}
 		
-		public List<Question> getUnused(List<Question> categoryProducts) {
-			List<Question> filtered = new ArrayList<Question>();
-			for (Iterator<Question> iterator = questionRepository.findAll().iterator(); iterator.hasNext();) {
-				Question product = (Question) iterator.next();
-				if(!categoryProducts.contains(product)) {
-					filtered.add(product);
-				};				
-			}
-			return filtered;
-		}
 }

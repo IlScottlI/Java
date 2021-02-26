@@ -13,34 +13,31 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.codingdojo.mvc.models.Answer;
 import com.codingdojo.mvc.models.Question;
 import com.codingdojo.mvc.models.Tag;
-import com.codingdojo.mvc.models.TagQuestion;
+import com.codingdojo.mvc.services.AnswerService;
 import com.codingdojo.mvc.services.QuestionService;
-import com.codingdojo.mvc.services.TagQuestionService;
 import com.codingdojo.mvc.services.TagService;
 
 @Controller
 public class IndexController {
-	
 	   private final QuestionService questionService;
 	   private final TagService tagService;
-	   private final TagQuestionService tagQuestionService;
+	   private final AnswerService answerService;
 	   public IndexController(
 			   QuestionService questionService,
 			   TagService tagService,
-			   TagQuestionService tagQuestionService
+			   AnswerService answerService
 			   ) {
 	        this.questionService = questionService;
 	        this.tagService = tagService;
-	        this.tagQuestionService = tagQuestionService;
+	        this.answerService = answerService;
 	    }
-
     @RequestMapping("/questions")
     public String dashboard(Model model) {
     	List<Question> questions = questionService.allItems();
         model.addAttribute("questions", questions);
-        questions.get(0).getTagsQuestions().forEach(System.out::println);
         return "dashboard.jsp";
     }
 
@@ -50,11 +47,43 @@ public class IndexController {
     }
 
     @RequestMapping("/questions/{id}")
-    public String index(@PathVariable("id") Long id,@ModelAttribute("question") Question question, Model model) {
+    public String index(
+    		@PathVariable("id") Long id,
+    		@ModelAttribute("answer") Answer answer, 
+    		Model model
+    		) {
+    	List<Answer> answers = questionService.findItem(id).getAnswers();
+    	Question question = questionService.findItem(id);
+    	model.addAttribute("answers", answers);
+    	model.addAttribute("question", question);
+    	model.addAttribute("tags", question.getTagsQuestions());
         return "view-question.jsp";
     }
+    @RequestMapping(value = "/questions/{id}", method = RequestMethod.POST)
+    public String addAnswer(
+    		@PathVariable("id") Long id,
+    		@RequestParam(value="answer") String answer,
+    		Model model
+    		) {
+    	
+    	Question question = questionService.findItem(id);
+    	
+        if (answer.isBlank()) {
+        	model.addAttribute("answers", question.getAnswers());
+        	model.addAttribute("question", question);
+        	model.addAttribute("isError", true);
+            return "view-question.jsp";
+        } else {
+        	Answer newAnswer =  new Answer();
+        	newAnswer.setAnswer(answer);
+        	newAnswer.setQuestion(question);
+        	answerService.createItem(newAnswer);
+        	model.addAttribute("isError", false);
+            return "redirect:/questions/" + id;   
+        }
+    }
     @RequestMapping(value = "/questions/new", method = RequestMethod.POST)
-    public String newItem(
+    public String newQuestion(
             @RequestParam(value="tags") String tags,
     		@Valid @ModelAttribute("question") Question question, 
     		BindingResult result
@@ -62,15 +91,10 @@ public class IndexController {
         if (result.hasErrors()) {
             return "new-question.jsp";
         } else {
-            Question newQuestion = questionService.createItem(question);
             List<Tag> tagList = tagService.createTags(tags);
-            List<TagQuestion> tagQuestionList = tagQuestionService.associateItems(tagList,newQuestion);
-            newQuestion.setTagsQuestions(tagQuestionList);
-            if (newQuestion.getTagsQuestions().size()>0) {
-            	return "redirect:/questions";
-			}
-            return "new-question.jsp";
-            
+            question.setTagsQuestions(tagList);
+            questionService.updateItem(question);
+            return "redirect:/questions";   
         }
     }
 }

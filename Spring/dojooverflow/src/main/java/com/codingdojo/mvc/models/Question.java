@@ -37,14 +37,14 @@ public class Question {
         joinColumns = @JoinColumn(name = "question_id"), 
         inverseJoinColumns = @JoinColumn(name = "tag_id")
     )
-    private List<TagQuestion> tagsQuestions;
+    private List<Tag> tagsQuestions;
     public Question() {
         
     }
-	public List<TagQuestion> getTagsQuestions() {
+	public List<Tag> getTagsQuestions() {
 		return tagsQuestions;
 	}
-	public void setTagsQuestions(List<TagQuestion> tagsQuestions) {
+	public void setTagsQuestions(List<Tag> tagsQuestions) {
 		this.tagsQuestions = tagsQuestions;
 	}
 	public String getTitle() {
@@ -52,6 +52,17 @@ public class Question {
 	}
 	public void setTitle(String title) {
 		this.title = title;
+	}
+	public String getTagsString() {
+		String res = "";
+		for (int i = 0; i < tagsQuestions.size(); i++) {
+			if(i+1 < tagsQuestions.size()) {
+				res += tagsQuestions.get(i).getName() + ", ";
+			} else {
+				res += tagsQuestions.get(i).getName() ;
+			}
+		}
+		return res;
 	}
 	public List<Answer> getAnswers() {
 		return answers;

@@ -49,7 +49,7 @@ public class TagQuestionService {
 				}
 	    		return tagQuestionList;
 	    }
-
+	    
 		public void deleteItem(Long id) {
 			tagQuestionRepository.deleteById(id);		
 		}
@@ -57,15 +57,5 @@ public class TagQuestionService {
 		public List<TagQuestion> findAll(Sort sortOrder) {
 			return tagQuestionRepository.findAll(sortOrder);
 		}
-		
-		public List<TagQuestion> getUnused(List<TagQuestion> categoryProducts) {
-			List<TagQuestion> filtered = new ArrayList<TagQuestion>();
-			for (Iterator<TagQuestion> iterator = tagQuestionRepository.findAll().iterator(); iterator.hasNext();) {
-				TagQuestion product = (TagQuestion) iterator.next();
-				if(!categoryProducts.contains(product)) {
-					filtered.add(product);
-				};				
-			}
-			return filtered;
-		}
+
 }

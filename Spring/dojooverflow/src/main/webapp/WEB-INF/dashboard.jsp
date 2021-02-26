@@ -35,7 +35,7 @@
                                 <tr>
                                     <td class="pl-4"><a class="underlined"
                                             href="/questions/${question.id}">${question.title}</a></td>
-                                    <td>${question.getTagsQuestions()}</td>
+                                    <td>${question.getTagsString()}</td>
                                 </tr>
                             </c:forEach>
                         </tbody>
