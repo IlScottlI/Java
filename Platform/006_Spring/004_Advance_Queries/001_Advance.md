@@ -11,7 +11,7 @@
 #   Advanced Queries
 The CrudRepository mainly provides us an interface to execute CRUD operations onto a specific entity. However, many times we want to execute complex queries that the repository does not support. In this tab, we are going to learn about JPA's Query language and native queries. We will be using the same database from the One-to-Many relationships lesson in Springs Data II.
 
-<img src="./../../000_img/onetomany%20(2).png">
+<img src="./../../000_img/onetomany.png">
 
 ##  __JPA Query Language (JPQL)__
 JPQL is the object-oriented version of SQL in JPA. The query strings may look a little different but they have a lot of similarities with plain SQL. For example, this is how you would write several select queries.

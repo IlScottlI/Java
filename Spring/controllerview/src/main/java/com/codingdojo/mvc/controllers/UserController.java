@@ -98,7 +98,7 @@ public class UserController {
 	            return "redirect:/home";
 	        } else {
 	        	model.addAttribute("userEmail", email);
-	            model.addAttribute("error", "<label class='Small text-danger'>Oh Snap! Check the password and try again</label>");
+	            model.addAttribute("error", "<label class='Small text-danger m-0 p-0'>Oh Snap! That password is not correct</label>");
 	            return "login-page.jsp";
 	        }
 	    }
