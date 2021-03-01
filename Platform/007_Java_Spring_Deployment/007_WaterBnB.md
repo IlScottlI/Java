@@ -11,7 +11,7 @@
 #   WaterBnB Belt Reviewer
 Create a Spring applications for Events
 
-<img src="./../000_img/waterBnB2%20(1).png">
+<img src="././../000_img/waterBnB2%20(1).png">
 
 
 
