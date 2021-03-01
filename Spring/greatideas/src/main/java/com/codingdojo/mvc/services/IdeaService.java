@@ -42,4 +42,16 @@ public class IdeaService {
 			return ideaRepository.findAll(sortOrder);
 		}
 		
+		public Idea updateItem(Idea item) {
+	        return ideaRepository.save(item);
+	    }
+		
+		public List<Idea> findAllAsc(){
+			return ideaRepository.findByOrderByLikeCountAsc();
+		}
+		
+		public List<Idea> findAllDesc(){
+			return ideaRepository.findByOrderByLikeCountDesc();
+		}
+		
 }

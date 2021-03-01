@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
@@ -29,13 +30,9 @@ public class Idea {
     @Column(updatable=false)
     private Date createdAt;
     private Date updatedAt;
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(
-        name = "users_ideas", 
-        joinColumns = @JoinColumn(name = "idea_id"), 
-        inverseJoinColumns = @JoinColumn(name = "user_id")
-    )
-    private List<User> users;
+	@ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="user_id")
+    private User user;
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
         name = "idea_likes", 
@@ -43,10 +40,18 @@ public class Idea {
         inverseJoinColumns = @JoinColumn(name = "like_id")
     )
     private List<Like> likes;
+    private int likeCount;
     public Idea() {
         
     }
-	  public List<Like> getLikes() {
+    public int getLikeCount() {
+    	this.likeCount = getLikes().size();
+		return likeCount;
+	}
+	public void setLikeCount(int likeCount) {
+		this.likeCount = getLikes().size();
+	}
+	public List<Like> getLikes() {
 		return likes;
 	}
 	public void setLikes(List<Like> likes) {
@@ -76,11 +81,11 @@ public class Idea {
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
-	public List<User> getUsers() {
-		return users;
+	public User getUser() {
+		return user;
 	}
-	public void setUsers(List<User> users) {
-		this.users = users;
+	public void setUser(User user) {
+		this.user = user;
 	}
 	@PrePersist
 	    protected void onCreate(){

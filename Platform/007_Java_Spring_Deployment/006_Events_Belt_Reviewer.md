@@ -11,7 +11,7 @@
 #   Events Belt Reviewer
 Create a Spring applications for Events
 
-<img src="./../000_img/events%20(1).png">
+<img src="././../000_img/events%20(1).png">
 
 ##  __Features__
 *   Registration and Login with validations

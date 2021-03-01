@@ -13,7 +13,9 @@
 
         <body>
             <nav class="navbar navbar-light navbar-expand-md">
-                <div class="container-fluid"><a class="navbar-brand"><strong>Great Ideas</strong></a></div>
+                <div class="container-fluid"><a class="navbar-brand" href="/ideas"><strong>Great Ideas</strong></a>
+                    <a class="btn-sm btn-secondary border rounded-pill" role="button" href="/logout">Logout</a>
+                </div>
             </nav>
             <main class="mt-5">
                 <div class="container mt-5">
@@ -22,7 +24,7 @@
                             <h2 class="mb-2"><strong>${idea.name}</strong></h2>
                             <nav class="navbar navbar-light navbar-expand-md mt-5">
                                 <div class="container-fluid">
-                                    <h4>Created By:<span class="ml-5 h5">${idea.getUsers().get(0).name}</span></h4>
+                                    <h4>Created By:<span class="ml-5 h5">${idea.getUser().name}</span></h4>
                                 </div>
                             </nav>
                             <div class="row">
@@ -40,7 +42,7 @@
                                             <tbody>
                                                 <c:forEach items="${idea.getLikes()}" var="like">
                                                     <tr>
-                                                        <td>${like.users.get(0).name}</td>
+                                                        <td>${like.getUser().name}</td>
                                                     </tr>
                                                 </c:forEach>
                                             </tbody>

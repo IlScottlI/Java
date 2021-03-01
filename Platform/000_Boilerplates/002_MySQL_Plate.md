@@ -66,8 +66,8 @@
     spring.datasource.url=jdbc:mysql://localhost:3307/spring-apps
     spring.datasource.username=root
     spring.datasource.password=root
-    spring.datasource.driver-class-name=com.mysql.jdbc.Driver
     spring.jpa.hibernate.ddl-auto=update
+    spring.mvc.hiddenmethod.filter.enabled=true
     ```
 5.  Create `src/main/webapp/WEB-INF/index.jsp` file:
     ```js

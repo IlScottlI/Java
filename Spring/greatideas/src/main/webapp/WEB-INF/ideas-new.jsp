@@ -14,7 +14,9 @@
 
             <body>
                 <nav class="navbar navbar-light navbar-expand-md">
-                    <div class="container-fluid"><a class="navbar-brand"><strong>Great Ideas</strong></a></div>
+                    <div class="container-fluid"><a class="navbar-brand" href="/ideas"><strong>Great Ideas</strong></a>
+                        <a class="btn-sm btn-secondary border rounded-pill" role="button" href="/logout">Logout</a>
+                    </div>
                 </nav>
                 <main class="mt-5">
                     <div class="container mt-5">

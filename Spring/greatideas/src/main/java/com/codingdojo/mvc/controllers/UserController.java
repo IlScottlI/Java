@@ -1,6 +1,6 @@
 package com.codingdojo.mvc.controllers;
-
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -16,20 +16,31 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.codingdojo.mvc.models.Idea;
+import com.codingdojo.mvc.models.IdeaLikes;
+import com.codingdojo.mvc.models.Like;
 import com.codingdojo.mvc.models.User;
+import com.codingdojo.mvc.services.IdeaLikeService;
 import com.codingdojo.mvc.services.IdeaService;
+import com.codingdojo.mvc.services.LikeService;
 import com.codingdojo.mvc.services.UserService;
+
 
 @Controller
 public class UserController {
 	 private final UserService userService;
 	 private final IdeaService ideaService;
+	 private final IdeaLikeService ideaLikeService;
+	 private final LikeService likeService;
 	    public UserController(
 	    		UserService userService,
-	    		IdeaService ideaService
+	    		IdeaService ideaService,
+	    		IdeaLikeService ideaLikeService,
+	    		LikeService likeService	    		
 	    		) {
 	        this.userService = userService;
 	        this.ideaService = ideaService;
+	        this.ideaLikeService = ideaLikeService;
+	        this.likeService = likeService;
 	    }
 	    
 	    
@@ -119,15 +130,44 @@ public class UserController {
 	    		Model model
 	    		) {
 	    	String action = "redirect:/";
-	    	List<Idea> ideas = ideaService.allItems();
+	    	List<Idea> ideas = ideaService.findAllAsc();
 	    	model.addAttribute("ideas",ideas);
-	    	ideas.get(0).getLikes().size();
 	    	try {
 	    		Object userId = session.getAttribute("userId");
 	    		if((Long) userId > 0) {
 	    			User user = userService.findUserById((Long)userId);
 	    			model.addAttribute("user",user);
-	    			action = "ideas.jsp";
+	    			action = "ideas.jsp";	    			
+	    		};
+			} catch (Exception e) {
+			     action = "redirect:/";
+			}
+			return action;
+	        // get user from session, save them in the model and return the home page
+	    }
+	    @RequestMapping(value="/ideas", method = RequestMethod.POST)
+	    public String homeSort(
+	    		HttpSession session, 
+	    		Model model,
+	    		@RequestParam(value="sort") String sort
+	    		) {
+	    	String action = "redirect:/";	    	
+	    	List<Idea> ideas = new ArrayList<Idea>();
+	    	switch (sort) {
+			case "asc":
+				ideas = ideaService.findAllAsc();
+				break;
+			case "desc":
+				ideas = ideaService.findAllDesc();
+				break;
+			}
+	    	model.addAttribute("ideas",ideas);
+	    	try {
+	    		Object userId = session.getAttribute("userId");
+	    		if((Long) userId > 0) {
+	    			User user = userService.findUserById((Long)userId);
+	    			model.addAttribute("user",user);
+	    			action = "ideas.jsp";	    			
 	    		};
 			} catch (Exception e) {
 			     action = "redirect:/";
@@ -160,9 +200,7 @@ public class UserController {
 	        } else {
 	        	Long user_id = Long.decode(userId);
 	        	User user = userService.findUserById(user_id);
-	        	List<User> createdByList = new ArrayList<User>();
-	        	createdByList.add(user);
-	        	idea.setUsers(createdByList);
+	        	idea.setUser(user);
 	            ideaService.createItem(idea);
 	            return "redirect:/ideas";   
 	        }
@@ -179,6 +217,7 @@ public class UserController {
 	    	model.addAttribute("idea",idea);
 	        return "ideas-view.jsp";
 	    }
+	    
 	    @RequestMapping("/ideas/{id}/edit")
 	    public String viewIdeaGetEdit(
 	    		@Valid @ModelAttribute("idea") Idea idea, 
@@ -187,14 +226,25 @@ public class UserController {
 	    		HttpSession session
 	    		) {
 	    	Object userId = session.getAttribute("userId");
-	    	model.addAttribute("user", userService.findUserById((Long) userId));
+	    	User user = userService.findUserById((Long) userId);
+	    	model.addAttribute("user", user);
 	    	Idea ideaEdit = ideaService.findItem(id);
 	    	model.addAttribute("ideaEdit",ideaEdit);
-	    	ideaEdit.getUsers().get(0).getId();
-	        return "ideas-edit.jsp";
+	    	try {
+	    		if (user.getId() == ideaEdit.getUser().getId()) {
+		    		return "ideas-edit.jsp";
+				} else {
+					return "redirect:/ideas";
+				}
+			} catch (Exception e) {
+				System.out.println(e);
+				return "redirect:/ideas";
+			}
+	    	
+	        
 	    }
 
-	    @RequestMapping(value = "/ideas/{id}/edit", method = RequestMethod.POST)
+	    @RequestMapping(value = "/ideas/{id}/edit", method = RequestMethod.PUT)
 	    public String viewIdeaPutEdit(
 	    		@Valid @ModelAttribute("idea") Idea idea, 
 	    		BindingResult result,
@@ -211,19 +261,74 @@ public class UserController {
 	    	 if (result.hasErrors()) {
 		            return "ideas-edit.jsp";
 		        } else {
-		        	List<User> createdByList = new ArrayList<User>();
-		        	createdByList.add(user);
 		        	ideaEdit.setName(idea.getName());
-		        	ideaEdit.setUsers(createdByList);
+		        	ideaEdit.setUser(user);
 		            ideaService.createItem(ideaEdit);
 		            return "redirect:/ideas/"+ ideaEdit.getId();   
 		        }
 	    }
 	    
 	    
-	    @RequestMapping(value = "/ideas/{id}/delete", method=RequestMethod.POST)
+	    @RequestMapping(value = "/ideas/{id}/delete", method=RequestMethod.DELETE)
 	    public String delete(@PathVariable("id") Long id) {
-	    	ideaService.deleteItem(id);
+	    	Idea idea = ideaService.findItem(id);
+	    	ideaLikeService.deleteLikesByIdea(idea);
+	    	return "redirect:/ideas";
+	    }
+	    
+	    @RequestMapping("/logout")
+	    public String logout(
+	    		HttpSession session
+	    		) {
+	        session.invalidate();
+	        return "redirect:/";
+	    }
+	    
+	    @RequestMapping(value = "/unlike/{id}", method=RequestMethod.POST)
+	    public String unlike(@PathVariable("id") Long id,HttpSession session) {
+	    	try {
+	    		Idea idea = ideaService.findItem(id);
+		    	List<Like> ideaLikes =  idea.getLikes();
+		    	List<Like> updatedLikes =  new ArrayList<Like>();
+	 	    	Object userId = session.getAttribute("userId");
+		    	User user = userService.findUserById((Long) userId);
+		    	for (Iterator<Like> iterator = ideaLikes.iterator(); iterator.hasNext();) {
+					Like like = (Like) iterator.next();
+					if(like.getUser().getId() != user.getId()) {
+						updatedLikes.add(like);
+					} else {
+						likeService.deleteItem(like.getId());
+					}
+				}
+			} catch (Exception e) {
+				System.out.println(e);
+			}
+	    	
+	    	return "redirect:/ideas";
+	    }
+	    
+	    @RequestMapping(value = "/like/{id}", method=RequestMethod.POST)
+	    public String like(@PathVariable("id") Long id,HttpSession session) {
+	    	try {
+	    		Idea idea = ideaService.findItem(id);
+	 	    	Object userId = session.getAttribute("userId");
+		    	User user = userService.findUserById((Long) userId);
+		    	int likeCount = idea.getLikes().size() + 1 ;
+		    	idea.setLikeCount(likeCount);
+		    	ideaService.updateItem(idea);
+		    	Like newLike = new Like();
+		    	newLike.setIdea(idea);
+		    	newLike.setUser(user);
+		    	likeService.createItem(newLike);
+		    	IdeaLikes newIdeaLikes = new IdeaLikes();
+		    	newIdeaLikes.setIdea(idea);
+		    	newIdeaLikes.setLike(newLike);
+		    	newIdeaLikes.setUsers(user);
+		    	ideaLikeService.createItem(newIdeaLikes);
+			} catch (Exception e) {
+				System.out.println(e);
+			}
+	    	
 	    	return "redirect:/ideas";
 	    }
 	    

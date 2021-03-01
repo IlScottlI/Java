@@ -29,7 +29,16 @@ public class IdeaLikes {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="idea_id")
     private Idea idea;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="user_id")
+    private User users;
     public IdeaLikes() {
+	}
+	public User getUsers() {
+		return users;
+	}
+	public void setUsers(User users) {
+		this.users = users;
 	}
 	public Idea getIdea() {
 		return idea;

@@ -44,25 +44,11 @@ public class User {
     private Date updatedAt;
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
-        name = "users_ideas", 
-        joinColumns = @JoinColumn(name = "user_id"), 
-        inverseJoinColumns = @JoinColumn(name = "idea_id")
-    )
-    private List<Idea> ideas;
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(
         name = "idea_likes", 
         joinColumns = @JoinColumn(name = "idea_id"), 
         inverseJoinColumns = @JoinColumn(name = "like_id")
     )
     private List<Like> likes;
-
-    public List<Idea> getIdeas() {
-		return ideas;
-	}
-	public void setIdeas(List<Idea> ideas) {
-		this.ideas = ideas;
-	}
 	public List<Like> getLikes() {
 		return likes;
 	}
